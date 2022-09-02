@@ -1,0 +1,77 @@
+﻿<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>刘世投资</title>
+<link rel="stylesheet" type="text/css" href="Assets/css/reset.css"/>
+<script type="text/javascript" src="Assets/js/jquery-1.8.3.min.js"></script>
+<script type="text/javascript" src="Assets/js/js_z.js"></script>
+<link rel="stylesheet" type="text/css" href="Assets/css/thems.css">
+<link rel="icon" href="picture.ico" type="image/x-icon"/>
+</head>
+<body>
+<head>
+<style>
+*{margin:0px auto; padding:0px;}
+#kuangjia
+{width:1920px; height:980px; border:#F00 hidden 3px; background-size:99%; background-repeat:no-repeat;}
+.t1
+{width:40px; height:40px; background-repeat:no-repeat; background-size:contain; cursor:pointer;}
+#t2
+{float:left; margin:455px 0px 0px 20px; background-image:url(images/zuo.png);}
+#t3
+{float:right; margin:455px 20px 0px 0px; background-image:url(images/you.png);}
+</style>
+</head>
+<body>
+<div id="kuangjia"><!--WillwinEA-->
+    <div class="t1" id="t2" onclick="(dd(-1))"></div>
+    <div class="t1" id="t3" onclick="(dd(1))"></div>
+</div>
+</body>
+</html>
+<script>
+var jh=new Array();
+jh[0]="url(images/img_1.png)";
+jh[1]="url(images/img_2.png)";
+jh[2]="url(images/img_3.png)";
+jh[3]="url(images/img_4.png)";
+jh[4]="url(images/img_5.png)";
+jh[5]="url(images/img_6.png)";
+jh[6]="url(images/img_7.jpg)";
+jh[7]="url(images/img_8.png)";
+jh[8]="url(images/img_9.png)";
+jh[9]="url(images/img_10.png)";
+jh[10]="url(images/img_11.png)";
+jh[11]="url(images/img_12.png)";
+
+
+var kj=document.getElementById("kuangjia");<!--获取框架div的标签，在下面进行更改背景-->
+var x=-1;<!--定义变量x，建立索引-->
+var l=jh.length;<!--获取集合中元素个数-->
+function lb()
+{
+    x++;
+    if (x==l)
+    {
+        x=0;
+    }
+    kj.style.backgroundImage=jh[x];
+    window.setTimeout("lb()",6000);<!--2s后再次播放集合中的图片-->
+}
+window.setTimeout("lb()",0);<!--开始进行轮播-->
+
+function dd(m)
+{
+    x=x+m;
+    if(x==l)    
+    {x=0;}
+    else if(x==-1)
+    {x=l;}
+    kj.style.backgroundImage=jh[x];
+}
+</script>
+
+WillwinEA
+</body>
+</html>
